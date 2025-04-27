@@ -59,6 +59,10 @@ languages:
           name: 🙋🏻‍♂️关于
           url: about
           weight: 50
+        - identifier: links
+          name: 🤝友链
+          url: links
+          weight: 60
 
 # 输出格式
 outputs:
@@ -89,6 +93,10 @@ params:
   ShowToc: true                      # 显示文章目录
   TocOpen: true                      # 自动展开目录
   comments: true                     # 启用评论功能
+
+  # 启用不蒜子Busuanzi流量统计
+  busuanzi:
+    enable: true
 
   # Profile 模式（首页个人简介区块）
   profileMode:

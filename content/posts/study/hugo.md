@@ -4,8 +4,8 @@ title: "Hugo博客系统"
 date: "2025-04-20"
 description: "Hugo&PaperMod搭建部署博客系统"
 tags: ["hugo", "papermod"]
-ShowToc: true
 ---
+
 #### 基础安装指南
 
 ##### 安装hugo,推荐使用安装包安装
