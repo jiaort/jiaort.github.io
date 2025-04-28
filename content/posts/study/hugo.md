@@ -50,6 +50,9 @@ hugo server -D
 
 ##### 编写workflows用于打包发布
 
+<details>
+<summary>deploy.yml</summary>
+
 ```yaml
 name: deploy
 
@@ -86,3 +89,22 @@ jobs:
                   keep_files: false
                   force_orphan: true
 ```
+
+</details>
+
+#### hugo定制化配置
+
+##### 相册功能
+https://cloud.tencent.com/developer/article/2246324
+
+##### 博客文章封面图片缩小并移到侧边
+https://cloud.tencent.com/developer/article/1969889
+
+##### 站点统计
+https://www.333rd.net/zh/posts/tech/hugo%E6%B7%BB%E5%8A%A0%E7%AB%99%E7%82%B9%E6%B5%81%E9%87%8F%E7%BB%9F%E8%AE%A1/
+
+##### 友链
+https://www.333rd.net/zh/posts/tech/hugo%E6%B7%BB%E5%8A%A0%E5%8F%8B%E9%93%BE%E9%A1%B5%E9%9D%A2/
+
+##### 侧边目录
+https://www.333rd.net/zh/posts/tech/hugo%E4%BE%A7%E8%BE%B9%E7%9B%AE%E5%BD%95/
