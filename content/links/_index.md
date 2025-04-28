@@ -11,4 +11,6 @@ comment: true
 {{< friendlink name="田少晗的个人博客" url="https://www.shaohanyun.top/" logo="https://www.shaohanyun.top/img/logo.gif" slogan="认识自我，超越自我" >}}
 {{< friendlink name="3rd's Blog" url="https://www.333rd.net/zh/" logo="https://333rd.net/img/logo.png" slogan="🌟雄关漫道真如铁🌟🌟而今迈步从头越🌟" >}}
 {{< friendlink name="Fawei's Blog" url="https://faweizhao26.github.io/" logo="https://raw.githubusercontent.com/faweizhao26/images/main/XAgiAH.jpeg" slogan="这里是运营人赵法威的工作总结与读书笔记" >}}
+{{< friendlink name="Yunpeng's Blog" url="https://yunpengtai.top/" logo="/images/male.png" slogan="Hi, this is Yunpeng Tai. I blog to think about interesting things." >}}
+{{< friendlink name="Villiam's Blog" url="https://williamlfang.github.io/" logo="https://williamlfang.github.io/images/william.jpg" slogan="Keep Calm and Markdown!" >}}
 </div>

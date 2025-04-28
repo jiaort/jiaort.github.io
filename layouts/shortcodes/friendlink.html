@@ -1,7 +1,7 @@
 <article class="friend-card">
   <a class="friend-link" href="{{ .Get "url" }}" target="_blank">
     <div class="friend-logo">
-      <img src="{{ .Get "logo" }}" alt="友链LOGO" loading="lazy">
+      <img src="{{ .Get "logo" }}" alt="友链LOGO" loading="lazy" onerror="this.onerror=null; this.src='/images/male.png';">
     </div>
     <div class="friend-info">
       <div class="friend-name">{{ .Get "name" }}</div>

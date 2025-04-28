@@ -4,10 +4,10 @@ title: "三体"
 date: "2025-04-28"
 description: "《三体》推荐阅读"
 tags: ["三体", "刘慈欣", "科幻小说"]
-# cover:
-#   image: "/images/read/three_body/santi.png"
-#   alt: "三体封面"
-#   relative: true
+cover:
+  image: "/images/read/santi.png"
+  alt: "三体封面"
+  relative: true
 ---
 
 # 📖 《三体》：穿越宇宙与文明的极致想象

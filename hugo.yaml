@@ -5,7 +5,7 @@ description: 一个分享生活、阅读、学习的个人博客。  # 网站描
 languageCode: zh-cn                  # 站点默认语言代码
 
 # 主题与分页
-theme: PaperMod                      # 使用的主题名称（请确保 themes 文件夹下有该主题）
+theme: ["hugo-notice", "PaperMod"]                      # 使用的主题名称（请确保 themes 文件夹下有该主题）
 pagination:
   pagerSize: 10                      # 首页每页显示的文章数
 
@@ -51,6 +51,10 @@ languages:
           name: ⌚时间轴
           url: archives
           weight: 20
+        - identifier: categories
+          name: 🏁分类
+          url: categories
+          weight: 30
         - identifier: tags
           name: 🔖标签
           url: tags
@@ -96,6 +100,10 @@ params:
 
   # 启用不蒜子Busuanzi流量统计
   busuanzi:
+    enable: true
+
+  # 启用fancybox图片查看器
+  fancybox:
     enable: true
 
   # Profile 模式（首页个人简介区块）

@@ -1,6 +1,7 @@
 {{- define "main" }}
 
-<article class="post-single">
+<article class="post" {{- if .Param "autonumbering" }} autonumbering {{- end }}>
+<!-- <article class="post-single"> -->
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
     <h1 class="post-title entry-hint-parent">
@@ -35,7 +36,7 @@
     {{- end }}
   </header>
   {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
-  {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+  {{- partial "cover1.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
   {{- if (.Param "ShowToc") }}
   {{- partial "toc.html" . }}
   {{- end }}
@@ -66,6 +67,7 @@
   {{- if (.Param "comments") }}
   {{- partial "comments.html" . }}
   {{- end }}
+
 </article>
 
 {{- end }}{{/* end main */}}
