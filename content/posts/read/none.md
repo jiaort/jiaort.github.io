@@ -5,7 +5,7 @@ date: "2025-04-28"
 description: "《无人生还》推荐阅读"
 tags: ["无人生还", "阿加莎·克里斯蒂", "推理小说"]
 cover:
-  image: "/images/read/wurenshenghuan.png"
+  image: "/images/read/cover/read.png"
   alt: "无人生还封面"
   relative: true
 ---

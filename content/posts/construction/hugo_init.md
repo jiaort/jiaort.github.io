@@ -1,11 +1,85 @@
+---
+author: ["Runtao Jiao"]
+title: "Hugo博客系统"
+date: "2025-04-20"
+description: "Hugo&PaperMod搭建部署博客系统"
+tags: ["hugo", "papermod"]
+categories: ["环境搭建"]
+autonumbering: true
+weight: 1
+cover:
+  image: "/images/default.png"
+  alt: "封面"
+  relative: true
+---
+
+## 安装hugo
+
+---
+
+### MacOS安装hugo
+
+``` shell
+brew install hugo
+```
+
+### linux安装包安装hugo
+
+``` shell
+wget https://github.com/gohugoio/hugo/releases/download/v0.147.0/hugo_extended_0.147.0_Linux-64bit.tar.gz
+tar -xzf hugo_extended_0.147.0_Linux-64bit.tar.gz
+sudo mv hugo /usr/local/bin/
+hugo version
+```
+
+### golang安装hugo
+
+需要Go1.23.0或更高版本
+``` shell
+go install github.com/gohugoio/hugo@latest
+```
+
+## 创建一个hugo博客，指定yaml
+
+```shell
+hugo new site mysite --format yaml
+```
+
+## 使用git管理博客
+
+```shell
+cd mysite
+git init
+git branch -M main
+```
+
+## 安装hugo-PaperMod主题
+
+```shell
+git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+vim hugo.yaml
+theme: ["PaperMod"]
+```
+
+## 运行hugo
+
+```shell
+hugo -F --cleanDestinationDir  # 重新生成public
+hugo server -D
+```
+---
+
+## 我的hugo配置
+
+``` yaml
 # 全局配置
-baseURL: https://jiaort.github.io    # 站点根 URL，用于生成绝对链接
-title: Runtao's Blog                 # 网站标题
-description: 个人博客                 # 网站描述，用于 SEO
+baseURL: https://jiaort.github.io     # 站点根 URL，用于生成绝对链接
+title: Runtao's Blog                # 网站标题
+description: 一个分享生活、阅读、学习的个人博客。  # 网站描述，用于 SEO
 languageCode: zh-cn                  # 站点默认语言代码
 
 # 主题与分页
-theme: ["PaperMod"]   # 使用的主题名称（请确保 themes 文件夹下有该主题）
+theme: ["PaperMod"]                      # 使用的主题名称（请确保 themes 文件夹下有该主题）
 pagination:
   pagerSize: 10                      # 首页每页显示的文章数
 
@@ -79,12 +153,12 @@ outputs:
 params:
   env: production                    # 环境标记（可用于启用特殊功能）
   homeInfoParams: false              # 关闭 homeInfoParams，启用 profileMode
-  description: "个人博客"             # 描述（与顶部 description 相同，可用于模板）
+  description: "这是一个纯粹的博客......"  # 描述（与顶部 description 相同，可用于模板）
   author: Runtao Jiao                # 作者
   defaultTheme: auto                 # 默认主题： light / dark / auto
   disableThemeToggle: false          # 是否禁用主题切换开关
   DateFormat: "2006-01-02"           # 全局日期格式
-  ShowShareButtons: false            # 显示社交分享按钮
+  ShowShareButtons: true             # 显示社交分享按钮
   ShowReadingTime: true              # 显示阅读时间
   displayFullLangName: true          # 显示完整语言名称
   ShowPostNavLinks: true             # 显示文章上下篇导航
@@ -121,7 +195,7 @@ params:
         url: posts/read
       - name: 📝学习
         url: posts/study
-      - name: 💻环境搭建
+      - name: 🖥环境搭建
         url: posts/construction
 
   # 社交图标
@@ -171,3 +245,4 @@ markup:
     guessSyntax: true                # 猜测代码语言
     lineNos: true                    # 显示行号
     style: darcula                   # 代码高亮主题
+```

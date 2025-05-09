@@ -5,7 +5,7 @@ date: "2023-08-10"
 description: "骑行日记"
 tags: ["骑行"]
 cover:
-  image: "/images/default.png"
+  image: "/images/life/cover/riding.jpg"
   alt: "封面"
   relative: true
 ---
