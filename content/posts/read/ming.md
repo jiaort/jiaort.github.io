@@ -5,7 +5,7 @@ date: "2025-04-28"
 description: "《明朝那些事儿》推荐阅读"
 tags: ["明朝那些事儿", "当年明月"]
 cover:
-  image: "/images/read/ming.png"
+  image: "/images/read/cover/read.png"
   alt: "封面"
   relative: true
 ---

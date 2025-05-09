@@ -5,7 +5,7 @@ date: "2025-04-20"
 description: "长安的荔枝推荐阅读"
 tags: ["长安的荔枝", "马伯庸"]
 cover:
-  image: "/images/default.png"
+  image: "/images/read/cover/read.png"
   alt: "封面"
   relative: true
 ---

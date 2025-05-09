@@ -6,7 +6,7 @@ description: "苦瓜歌词分享"
 tags: ["音乐", "陈奕迅"]
 categories: ["音乐"]
 cover:
-  image: "/images/default.png"
+  image: "/images/life/cover/cyx.jpg"
   alt: "封面"
   relative: true
 ---

@@ -1,3 +1,75 @@
+---
+author: ["Runtao Jiao"]
+title: "【置顶】搭建Hugo博客系统"
+date: "2025-04-20"
+description: "Hugo&PaperMod搭建部署博客系统"
+tags: ["hugo", "papermod"]
+categories: ["环境搭建"]
+autonumbering: true
+weight: 1
+cover:
+  image: "/images/default.png"
+  alt: "封面"
+  relative: true
+---
+
+## 安装hugo
+
+### MacOS安装hugo
+
+``` shell
+brew install hugo
+```
+
+### linux安装包安装hugo
+
+``` shell
+wget https://github.com/gohugoio/hugo/releases/download/v0.147.0/hugo_extended_0.147.0_Linux-64bit.tar.gz
+tar -xzf hugo_extended_0.147.0_Linux-64bit.tar.gz
+sudo mv hugo /usr/local/bin/
+hugo version
+```
+
+### golang安装hugo
+
+需要Go1.23.0或更高版本
+``` shell
+go install github.com/gohugoio/hugo@latest
+```
+
+## 创建一个hugo博客，指定yaml
+
+```shell
+hugo new site mysite --format yaml
+```
+
+## 使用git管理博客
+
+```shell
+cd mysite
+git init
+git branch -M main
+```
+
+## 安装hugo-PaperMod主题
+
+```shell
+git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+vim hugo.yaml
+theme: ["PaperMod"]
+```
+
+## 运行hugo
+
+```shell
+hugo -F --cleanDestinationDir  # 重新生成public
+hugo server -D
+```
+---
+
+## 我的hugo配置
+
+``` yaml
 # 全局配置
 baseURL: https://jiaort.github.io    # 站点根 URL，用于生成绝对链接
 title: Runtao's Blog                 # 网站标题
@@ -171,3 +243,4 @@ markup:
     guessSyntax: true                # 猜测代码语言
     lineNos: true                    # 显示行号
     style: darcula                   # 代码高亮主题
+```

@@ -4,7 +4,7 @@ title: "Hugo博客系统"
 date: "2025-04-20"
 description: "Hugo&PaperMod搭建部署博客系统"
 tags: ["hugo", "papermod"]
-categories: ["hugo环境搭建"]
+categories: ["环境搭建"]
 autonumbering: true
 cover:
   image: "/images/default.png"
@@ -230,6 +230,8 @@ markup:
 
 ## 部署hugo博客到github pages
 
+[官方文档](https://docs.github.com/zh/pages/getting-started-with-github-pages)
+
 ### 创建一个Giithub pages仓库
 
 创建一个命名为`yourname.github.io`的仓库，并开启Github pages功能。
@@ -250,7 +252,7 @@ git push -u origin main
 ![PERSONAL_TOKEN](/images/study/secret_variables.png)
 
 创建并选择发布仓库的分支为`gh-pages`
-![gh-pages](/images/study/gh-pages.png)]
+![gh-pages](/images/study/gh-pages.png)
 
 编写workflows用于打包发布，在`.github/workflows`目录下创建`deploy.yml`文件，内容如下：
 
@@ -1090,12 +1092,8 @@ $$ \boldsymbol{x}{i+1}+\boldsymbol{x}{i+2} $$
 
 **流程图示例**
 {{< mermaid >}}
-graph TD;
-    A[开始] --> B{条件判断};
-    B -->|是| C[执行操作1];
-    B -->|否| D[执行操作2];
-    C --> E[结束];
-    D --> E;
+flowchart LR
+    a --> b & c --> d
 {{< /mermaid >}}
 
 ### 图片放大
@@ -1133,15 +1131,165 @@ graph TD;
 
 ### 增加notice块
 
-[hugo-notice网站](https://github.com/martignoni/hugo-notice)
+参考：[hugo-notice网站](https://github.com/martignoni/hugo-notice)
 
-``` shell 
-git submodule add https://github.com/martignoni/hugo-notice.git themes/hugo-notice
+{{< notice info >}}
+创建代码块, vim layouts/shortcodes/notice.html
+{{< /notice >}}
+
+<details>
+<summary>notice.html</summary>
+
+``` html
+{{/* Available notice types: warning, info, note, tip */}}
+{{- $noticeType := .Get 0 | default "note" -}}
+
+{{/* Workaround markdownify inconsistency for single/multiple paragraphs */}}
+{{- $raw := (markdownify .Inner | chomp) -}}
+{{- $block := findRE "(?is)^<(?:address|article|aside|blockquote|canvas|dd|div|dl|dt|fieldset|figcaption|figure|footer|form|h(?:1|2|3|4|5|6)|header|hgroup|hr|li|main|nav|noscript|ol|output|p|pre|section|table|tfoot|ul|video)\\b" $raw 1 -}}
+
+{{/* Load the css if it's the first time */}}
+{{- if not (.Page.Store.Get "notice-style-loaded-flag") -}}
+<style type="text/css">
+    /* Light theme */
+    .notice {
+        --title-color: #fff;
+        --title-background-color: #6be;
+        --content-color: #444;
+        --content-background-color: #e7f2fa;
+    }
+
+    .notice.info {
+        --title-background-color: #fb7;
+        --content-background-color: #fec;
+    }
+
+    .notice.tip {
+        --title-background-color: #5a5;
+        --content-background-color: #efe;
+    }
+
+    .notice.warning {
+        --title-background-color: #c33;
+        --content-background-color: #fee;
+    }
+
+    /* Dark theme */
+    /* @media (prefers-color-scheme:dark) {
+        .notice {
+            --title-color: #fff;
+            --title-background-color: #069;
+            --content-color: #ddd;
+            --content-background-color: #023;
+        }
+
+        .notice.info {
+            --title-background-color: #a50;
+            --content-background-color: #420;
+        }
+
+        .notice.tip {
+            --title-background-color: #363;
+            --content-background-color: #121;
+        }
+
+        .notice.warning {
+            --title-background-color: #800;
+            --content-background-color: #400;
+        }
+    } */
+
+    body.dark .notice {
+        --title-color: #fff;
+        --title-background-color: #069;
+        --content-color: #ddd;
+        --content-background-color: #023;
+    }
+
+    body.dark .notice.info {
+        --title-background-color: #a50;
+        --content-background-color: #420;
+    }
+
+    body.dark .notice.tip {
+        --title-background-color: #363;
+        --content-background-color: #121;
+    }
+
+    body.dark .notice.warning {
+        --title-background-color: #800;
+        --content-background-color: #400;
+    }
+
+    /* Content */
+    .notice {
+        padding: 12px;
+        line-height: 18px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+        color: var(--content-color);
+        background: var(--content-background-color);
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .notice p:last-child {
+        margin-bottom: 0
+    }
+
+    /* Icon */
+    .icon-notice {
+        display: inline-flex;
+        align-self: flex-start;
+        margin-right: 12px;
+        flex-shrink: 0;
+    }
+
+    .icon-notice img,
+    .icon-notice svg {
+        height: 1.0em;
+        width: 1.0em;
+        fill: currentColor;
+    }
+
+    .notice-content {
+        flex: 1;
+    }
+</style>
+{{- .Page.Store.Set "notice-style-loaded-flag" true -}}
+{{- end -}}
+
+<div class="notice {{ $noticeType }}" {{ if len .Params | eq 2 }} id="{{ .Get 1 }}" {{ end }}>
+    <span class="icon-notice">
+        {{ printf "static/icons/%s.svg" $noticeType | readFile | safeHTML }}
+    </span>
+    <div class="notice-content">
+        {{- if or $block (not $raw) }}{{ $raw }}{{ else }}<p>{{ $raw }}</p>{{ end -}}
+    </div>
+</div>
 ```
 
-> vim hugo.yaml  添加notice
-```
-theme: ["hugo-notice", "PaperMod"]
+</details>
+
+
+{{< notice note >}}
+创建icons文件夹 分别放入不同等级svg mkdir -p static/icons
+vim info.svg、note.svg、tips.svg、warning.svg
+{{< /notice >}}
+
+``` html
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="92 59.5 300 300">
+  <path d="M292 303.25V272c0-3.516-2.734-6.25-6.25-6.25H267v-100c0-3.516-2.734-6.25-6.25-6.25h-62.5c-3.516 0-6.25 2.734-6.25 6.25V197c0 3.516 2.734 6.25 6.25 6.25H217v62.5h-18.75c-3.516 0-6.25 2.734-6.25 6.25v31.25c0 3.516 2.734 6.25 6.25 6.25h87.5c3.516 0 6.25-2.734 6.25-6.25Zm-25-175V97c0-3.516-2.734-6.25-6.25-6.25h-37.5c-3.516 0-6.25 2.734-6.25 6.25v31.25c0 3.516 2.734 6.25 6.25 6.25h37.5c3.516 0 6.25-2.734 6.25-6.25Zm125 81.25c0 82.813-67.188 150-150 150-82.813 0-150-67.188-150-150 0-82.813 67.188-150 150-150 82.813 0 150 67.188 150 150Z"/>
+</svg>  // info.svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 128 300 300">
+  <path d="M150 128c82.813 0 150 67.188 150 150 0 82.813-67.188 150-150 150C67.187 428 0 360.812 0 278c0-82.813 67.188-150 150-150Zm25 243.555v-37.11c0-3.515-2.734-6.445-6.055-6.445h-37.5c-3.515 0-6.445 2.93-6.445 6.445v37.11c0 3.515 2.93 6.445 6.445 6.445h37.5c3.32 0 6.055-2.93 6.055-6.445Zm-.39-67.188 3.515-121.289c0-1.367-.586-2.734-1.953-3.516-1.172-.976-2.93-1.562-4.688-1.562h-42.968c-1.758 0-3.516.586-4.688 1.563-1.367.78-1.953 2.148-1.953 3.515l3.32 121.29c0 2.734 2.93 4.882 6.64 4.882h36.134c3.515 0 6.445-2.148 6.64-4.883Z"/>
+</svg>  // note.svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="300.5 134 300 300">
+  <path d="M551.281 252.36c0-3.32-1.172-6.641-3.515-8.985l-17.774-17.578c-2.344-2.344-5.469-3.711-8.789-3.711-3.32 0-6.445 1.367-8.789 3.71l-79.687 79.493-44.141-44.14c-2.344-2.344-5.469-3.712-8.79-3.712-3.32 0-6.444 1.368-8.788 3.711l-17.774 17.579c-2.343 2.343-3.515 5.664-3.515 8.984 0 3.32 1.172 6.445 3.515 8.789l70.704 70.703c2.343 2.344 5.664 3.711 8.789 3.711 3.32 0 6.64-1.367 8.984-3.71l106.055-106.056c2.343-2.343 3.515-5.468 3.515-8.789ZM600.5 284c0 82.813-67.188 150-150 150-82.813 0-150-67.188-150-150 0-82.813 67.188-150 150-150 82.813 0 150 67.188 150 150Z"/>
+</svg>  // tips.svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="126 76.5 300 300">
+  <path d="M297.431 324.397v-34.255c0-3.245-2.344-5.95-5.358-5.95h-32.146c-3.014 0-5.358 2.705-5.358 5.95v34.255c0 3.245 2.344 5.95 5.358 5.95h32.146c3.014 0 5.358-2.705 5.358-5.95Zm-.335-67.428 3.014-82.753c0-1.081-.502-2.524-1.674-3.425-1.005-.902-2.512-1.983-4.019-1.983h-36.834c-1.507 0-3.014 1.081-4.019 1.983-1.172.901-1.674 2.704-1.674 3.786l2.846 82.392c0 2.344 2.512 4.146 5.693 4.146h30.975c3.013 0 5.525-1.803 5.692-4.146Zm-2.344-168.39L423.34 342.425c3.683 7.032 3.516 15.686-.335 22.717-3.85 7.031-10.883 11.358-18.417 11.358H147.413c-7.534 0-14.566-4.327-18.417-11.358-3.85-7.031-4.018-15.685-.335-22.716L257.248 88.578C260.93 81.188 268.13 76.5 276 76.5c7.87 0 15.069 4.688 18.752 12.08Z"/>
+</svg>  // warning.svg
 ```
 
 **示例** 删除'/'
@@ -1165,7 +1313,7 @@ This is a info.
 {{< /notice >}}
 
 {{< notice note >}}
-This is a note.
+这是一个提示.
 {{< /notice >}}
 
 

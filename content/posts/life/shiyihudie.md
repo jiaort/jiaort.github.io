@@ -6,7 +6,7 @@ description: "失忆蝴蝶歌词分享"
 tags: ["音乐", "陈奕迅"]
 categories: ["音乐"]
 cover:
-  image: "/images/default.png"
+  image: "/images/life/cover/cyx2.jpg"
   alt: "封面"
   relative: true
 ---
