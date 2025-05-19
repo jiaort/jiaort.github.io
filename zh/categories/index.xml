@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>🏁分类 on Runtao&#39;s Blog</title>
+    <link>https://jiaort.github.io/zh/categories/</link>
+    <description>Recent content in 🏁分类 on Runtao&#39;s Blog</description>
+    <generator>Hugo -- 0.147.3</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 28 Apr 2025 16:16:57 +0800</lastBuildDate>
+    <atom:link href="https://jiaort.github.io/zh/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>音乐</title>
+      <link>https://jiaort.github.io/zh/categories/%E9%9F%B3%E4%B9%90/</link>
+      <pubDate>Mon, 28 Apr 2025 16:16:57 +0800</pubDate>
+      <guid>https://jiaort.github.io/zh/categories/%E9%9F%B3%E4%B9%90/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>环境搭建</title>
+      <link>https://jiaort.github.io/zh/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://jiaort.github.io/zh/categories/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
