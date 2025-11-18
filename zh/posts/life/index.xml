@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>🌻生活 on Runtao&#39;s Blog</title>
+    <link>https://jiaort.github.io/zh/posts/life/</link>
+    <description>Recent content in 🌻生活 on Runtao&#39;s Blog</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 28 Apr 2025 16:16:57 +0800</lastBuildDate>
+    <atom:link href="https://jiaort.github.io/zh/posts/life/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>苦瓜</title>
+      <link>https://jiaort.github.io/zh/posts/life/kugua/</link>
+      <pubDate>Mon, 28 Apr 2025 16:16:57 +0800</pubDate>
+      <guid>https://jiaort.github.io/zh/posts/life/kugua/</guid>
+      <description>苦瓜歌词分享</description>
+    </item>
+    <item>
+      <title>失忆蝴蝶</title>
+      <link>https://jiaort.github.io/zh/posts/life/shiyihudie/</link>
+      <pubDate>Mon, 28 Apr 2025 16:16:57 +0800</pubDate>
+      <guid>https://jiaort.github.io/zh/posts/life/shiyihudie/</guid>
+      <description>失忆蝴蝶歌词分享</description>
+    </item>
+    <item>
+      <title>十面埋伏</title>
+      <link>https://jiaort.github.io/zh/posts/life/shimianmaifu/</link>
+      <pubDate>Mon, 28 Apr 2025 16:16:57 +0800</pubDate>
+      <guid>https://jiaort.github.io/zh/posts/life/shimianmaifu/</guid>
+      <description>十面埋伏歌词分享</description>
+    </item>
+    <item>
+      <title>骑行</title>
+      <link>https://jiaort.github.io/zh/posts/life/riding/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://jiaort.github.io/zh/posts/life/riding/</guid>
+      <description>骑行日记</description>
+    </item>
+  </channel>
+</rss>

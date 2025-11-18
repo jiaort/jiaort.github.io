@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>💻环境搭建 on Runtao&#39;s Blog</title>
+    <link>https://jiaort.github.io/zh/posts/construction/</link>
+    <description>Recent content in 💻环境搭建 on Runtao&#39;s Blog</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh</language>
+    <lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://jiaort.github.io/zh/posts/construction/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【置顶】搭建Hugo博客系统</title>
+      <link>https://jiaort.github.io/zh/posts/construction/hugo_init/</link>
+      <pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://jiaort.github.io/zh/posts/construction/hugo_init/</guid>
+      <description>Hugo&amp;amp;PaperMod搭建部署博客系统</description>
+    </item>
+    <item>
+      <title>将Hugo静态网站部署到Github Pages</title>
+      <link>https://jiaort.github.io/zh/posts/construction/hugo_github_pages/</link>
+      <pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://jiaort.github.io/zh/posts/construction/hugo_github_pages/</guid>
+      <description>将Hugo静态网站部署到Github Pages</description>
+    </item>
+    <item>
+      <title>安装Harbor</title>
+      <link>https://jiaort.github.io/zh/posts/construction/harbor/</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://jiaort.github.io/zh/posts/construction/harbor/</guid>
+      <description>通过docker-compose部署Harbor</description>
+    </item>
+    <item>
+      <title>安装Jenkins</title>
+      <link>https://jiaort.github.io/zh/posts/construction/jenkins/</link>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://jiaort.github.io/zh/posts/construction/jenkins/</guid>
+      <description>通过docker-compose部署Jenkins</description>
+    </item>
+  </channel>
+</rss>

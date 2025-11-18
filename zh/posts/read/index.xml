@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>📖阅读 on Runtao&#39;s Blog</title>
+    <link>https://jiaort.github.io/zh/posts/read/</link>
+    <description>Recent content in 📖阅读 on Runtao&#39;s Blog</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 28 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://jiaort.github.io/zh/posts/read/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>明朝那些事儿</title>
+      <link>https://jiaort.github.io/zh/posts/read/ming/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://jiaort.github.io/zh/posts/read/ming/</guid>
+      <description>《明朝那些事儿》推荐阅读</description>
+    </item>
+    <item>
+      <title>三体</title>
+      <link>https://jiaort.github.io/zh/posts/read/three_body/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://jiaort.github.io/zh/posts/read/three_body/</guid>
+      <description>《三体》推荐阅读</description>
+    </item>
+    <item>
+      <title>无人生还</title>
+      <link>https://jiaort.github.io/zh/posts/read/none/</link>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://jiaort.github.io/zh/posts/read/none/</guid>
+      <description>《无人生还》推荐阅读</description>
+    </item>
+    <item>
+      <title>悉达多</title>
+      <link>https://jiaort.github.io/zh/posts/read/siddhartha/</link>
+      <pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://jiaort.github.io/zh/posts/read/siddhartha/</guid>
+      <description>悉达多推荐阅读</description>
+    </item>
+    <item>
+      <title>长安的荔枝</title>
+      <link>https://jiaort.github.io/zh/posts/read/changan/</link>
+      <pubDate>Sun, 20 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://jiaort.github.io/zh/posts/read/changan/</guid>
+      <description>长安的荔枝推荐阅读</description>
+    </item>
+  </channel>
+</rss>
