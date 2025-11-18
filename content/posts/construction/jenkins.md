@@ -86,7 +86,7 @@ services:
     environment:
       - TZ=Asia/Shanghai
     extra_hosts:
-      - "git.huaxin-hitec.com:101.201.100.217"
+      - "domain:ip"
     logging:
       driver: json-file
       options:
