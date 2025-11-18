@@ -4,6 +4,7 @@ title: "骑行"
 date: "2023-08-10"
 description: "骑行日记"
 tags: ["骑行"]
+categories: ["生活"]
 cover:
   image: "/images/life/cover/riding.jpg"
   alt: "封面"

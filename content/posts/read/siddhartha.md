@@ -4,6 +4,7 @@ title: "悉达多"
 date: "2025-04-20"
 description: "悉达多推荐阅读"
 tags: ["悉达多", "黑塞"]
+categories: ["读书"]
 cover:
   image: "/images/read/cover/read.png"
   alt: "封面"
